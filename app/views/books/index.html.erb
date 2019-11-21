@@ -1,0 +1,27 @@
+<head>
+	<h5> Hello de p dans le header </h5>
+	<hr>
+</head>
+<h3> <b>Books#index</b> </h3>
+<p>Find me in app/views/books/index.html.erb</p>
+<ul id="book-list">
+<% @books.each do |book|%>
+ <li> "<%= book.title %>" by <b> <%= book.author %></b> </li>
+<% end %>
+</ul>
+<hr>
+<div class="form">
+	<%= form_tag(books_path, method: :post, class: "form") do %>
+		<label for="title"> Title
+		<%= text_field_tag :title %> </label>
+
+		<label for="author">author
+		<%= text_field_tag :author %> </label>
+
+		<%= submit_tag 'create', :name => 'commit'%>
+	<% end %>
+</div>
+<footer>
+	<hr>
+	<h5> Hello de p dans le footer </h5>
+</footer>
