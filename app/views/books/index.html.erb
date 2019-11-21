@@ -4,11 +4,11 @@
 </head>
 <h3> <b>Books#index</b> </h3>
 <p>Find me in app/views/books/index.html.erb</p>
-<ul id="book-list">
+<ol id="book-list">
 <% @books.each do |book|%>
- <li> "<%= book.title %>" by <b> <%= book.author %></b> </li>
+ <li> "<%= book.title %>"  by  <b> <%= book.author %></b> </li>
 <% end %>
-</ul>
+</ol>
 <hr>
 <div class="form">
 	<%= form_tag(books_path, method: :post, class: "form") do %>
